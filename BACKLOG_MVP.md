@@ -4,29 +4,29 @@ Este documento reúne as tarefas necessárias para entregar o MVP (Minimum Viabl
 
 ## 1️⃣ Preparação do ambiente
 
-- [ ] Instalar **Node.js** (versão ≥ 18) e **npm**.
-- [ ] Criar o projeto Next.js com Tailwind já configurado:
+- [x] Instalar **Node.js** (versão ≥ 18) e **npm**.
+- [x] Criar o projeto Next.js com Tailwind já configurado:
 
   ```bash
   npx create-next-app@latest fishing-site --typescript --tailwind --eslint --app --src-dir
   ```
 
-- [ ] Instalar dependências:
+- [x] Instalar dependências:
   - `prisma` e `@prisma/client`
-- [ ] Criar `.env.local` na raiz com a variável do banco:
+- [x] Criar `.env.local` na raiz com a variável do banco:
 
   ```env
   DATABASE_URL="postgresql://..."
   ```
 
-- [ ] Adicionar `.env.local` e `.env` ao `.gitignore`
-- [ ] Criar `README.md` com instruções de setup local (clone → install → migrate → dev)
+- [x] Adicionar `.env.local` e `.env` ao `.gitignore`
+- [x] Criar `README.md` com instruções de setup local (clone → install → migrate → dev)
 
 ## 2️⃣ Configuração do banco (PostgreSQL + Neon + Prisma)
 
 - [ ] Criar conta gratuita em [neon.tech](https://neon.tech) e copiar a `DATABASE_URL` para o `.env.local`
-- [ ] Executar `npx prisma init --datasource-provider postgresql`
-- [ ] Editar `prisma/schema.prisma` para incluir o modelo **Comment**:
+- [x] Executar `npx prisma init --datasource-provider postgresql`
+- [x] Editar `prisma/schema.prisma` para incluir o modelo **Comment**:
 
   ```prisma
   model Comment {
@@ -41,8 +41,8 @@ Este documento reúne as tarefas necessárias para entregar o MVP (Minimum Viabl
 
 ## 3️⃣ Estrutura de pastas & dados estáticos
 
-- [ ] Criar pastas: `src/components/`, `src/data/`, `src/types/`, `src/app/api/`, `public/img/`.
-- [ ] Criar `src/types/index.ts` com interfaces TypeScript para os dados:
+- [x] Criar pastas: `src/components/`, `src/data/`, `src/types/`, `src/app/api/`, `public/img/`.
+- [x] Criar `src/types/index.ts` com interfaces TypeScript para os dados:
 
   ```ts
   export interface Bait { id: number; name: string; image: string; targetFish: string[]; description: string }
@@ -50,13 +50,13 @@ Este documento reúne as tarefas necessárias para entregar o MVP (Minimum Viabl
   export interface Fish { id: number; name: string; image: string; habitat: 'freshwater' | 'saltwater'; tips: string[] }
   ```
 
-- [ ] Criar arquivos separados em `src/data/`:
+- [x] Criar arquivos separados em `src/data/`:
   - `baits.ts` – 10 iscas (nome, imagem, peixes‑alvo, descrição)
   - `gear.ts` – 3 varas, 2 molinetes, 2 carretilhas, 2 linhas
   - `fish.ts` – 5 peixes de água doce + 3 de água salgada (habitat + dicas)
-- [ ] Usar imagens do [Unsplash](https://unsplash.com) (gratuitas, URLs externas)
+- [x] Usar imagens do [Unsplash](https://unsplash.com) (gratuitas, URLs externas)
 
-- [ ] Configurar `next.config.ts` para permitir domínios de imagem externos:
+- [x] Configurar `next.config.ts` para permitir domínios de imagem externos:
 
   ```ts
   images: { remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }] }
@@ -64,10 +64,10 @@ Este documento reúne as tarefas necessárias para entregar o MVP (Minimum Viabl
 
 ## 4️⃣ Componentes de UI reutilizáveis
 
-- [ ] `src/components/Navbar.tsx` – barra de navegação fixa com links para: Início, Iscas, Equipamentos, Peixes, Fórum. Responsiva com menu hamburguer no mobile.
-- [ ] `src/components/Card.tsx` – card genérico com `next/image` (título, imagem, descrição, extra).
-- [ ] `src/components/Forum.tsx` – UI de envio/visualização de comentários (anônimo).
-- [ ] `src/components/Tabs.tsx` – abas reutilizáveis para a página de equipamentos.
+- [x] `src/components/Navbar.tsx` – barra de navegação fixa com links para: Início, Iscas, Equipamentos, Peixes, Fórum. Responsiva com menu hamburguer no mobile.
+- [x] `src/components/Card.tsx` – card genérico com `next/image` (título, imagem, descrição, extra).
+- [x] `src/components/Forum.tsx` – UI de envio/visualização de comentários (anônimo).
+- [x] `src/components/Tabs.tsx` – abas reutilizáveis para a página de equipamentos.
 
 ## 5️⃣ Páginas do site
 
@@ -93,11 +93,11 @@ export const metadata: Metadata = {
 
 ## 6️⃣ API do fórum
 
-- [ ] Criar `src/app/api/comments/route.ts`:
+- [x] Criar `src/app/api/comments/route.ts`:
   - `GET` → retorna lista paginada (`?page=1&limit=10`)
   - `POST` → cria comentário, com validações: conteúdo não vazio e máximo de 500 caracteres
 - [ ] Adicionar rate limiting simples: 1 POST por IP a cada 30 segundos
-- [ ] Garantir tratamento de erros e retorno JSON padronizado.
+- [x] Garantir tratamento de erros e retorno JSON padronizado.
 
 ## 7️⃣ Estilos globais
 
