@@ -1,20 +1,32 @@
+# fishing-site
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js version ≥ 18 (LTS)
+- npm (bundled with Node)
+
+### Setup
 
 ```bash
+# 1. Navigate to the project folder
+cd fishing-site
+
+# 2. Install dependencies
+npm install
+
+# 3. Generate Prisma client (and apply migrations if needed)
+npx prisma generate
+# Optional: npx prisma migrate dev --name init   # creates DB tables
+
+# 4. Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open **<http://localhost:3000>** in your browser. The app reloads automatically as you edit source files.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
