@@ -56,16 +56,16 @@ export const gear: GearItem[] = [
   // Linhas
   {
     id: 8,
-    name: "Linha Monofilamento 0,20mm",
-    image: "/img/equipamentos/linha-monofilamento.jpg",
-    description: "Alta resistência, ideal para pesca de água doce.",
+    name: "Linha de pesca 500m Linha Multi Eclipse Pro 4X NG Pesca Brasil 0,23 mm",
+    image: "/img/equipamentos/linha1.webp",
+    description: "é a escolha ideal para pescadores que exigem desempenho e confiança em qualquer tipo de pesca esportiva.",
     category: "line"
   },
   {
     id: 9,
-    name: "Linha Fluorocarbono 0,12mm",
-    image: "/img/equipamentos/linha-monofilamento.jpg",
-    description: "Baixa visibilidade, recomendada para peixes cautelosos.",
+    name: "Linha de pesca oceânica multifilamento Pioneer Argonaut 8 fios 20LB",
+    image: "/img/equipamentos/linha2.webp",
+    description: "8 fios trançados Extremamente macia e fina multicolorida e verde musgo para facilitar a camuflagem Arremessos longos e precisos.",
     category: "line"
   }
 ];

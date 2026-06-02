@@ -11,7 +11,7 @@ export default function Card({ title, image, description, href }: CardProps) {
   const container = (
     <div className="border rounded overflow-hidden shadow-lg">
       <div className="relative w-full aspect-square">
-        <Image src={image} alt={title} fill style={{ objectFit: "contain", objectPosition: "center" }} />
+      <Image src={image} alt={title} fill style={{ objectFit: "cover", objectPosition: "center" }} />
       </div>
       <div className="p-4">
         <h3 className="font-bold text-lg mb-2">{title}</h3>

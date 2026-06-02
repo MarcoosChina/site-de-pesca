@@ -17,7 +17,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-blue-800 text-white p-4 flex items-center justify-between">
+    <nav className="bg-blue-950 text-white p-4 flex items-center justify-between">
       <div className="text-xl font-bold">Site de Pesca</div>
       <button
         className="md:hidden block"
@@ -27,7 +27,7 @@ export default function Navbar() {
         ☰
       </button>
       <ul
-        className={`md:flex space-x-4 ${isOpen ? "block" : "hidden"} absolute md:static top-full left-0 w-full bg-blue-800 md:w-auto`}
+        className={`md:flex space-x-4 ${isOpen ? "block" : "hidden"} absolute md:static top-full left-0 w-ful bg-blue 950 md:w-auto`}
       >
         {links.map((link) => (
           <li key={link.href} className="p-2">

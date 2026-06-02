@@ -3,72 +3,65 @@ import { Bait } from "../types";
 export const baits: Bait[] = [
   {
     id: 1,
-    name: "Mickey",
-    image: "/img/iscas/spinnerbait.jpg",
+    name: "Iscas Minhocas Artificiais Realistas Atrativo Pesca Silicone",
+    image: "/img/iscas/isca1.webp",
     targetFish: ["Truta", "Pacu"],
-    description: "Isca artificial de soft plastic em formato de minhoca, ótima para águas doces."
+    description: "Recomendado para pesca de apaiari, betara, cara, cascudo, corvina, curimbatá, dourado, jundiá, lambari, mandi, pacu, papa-terra, pargo, piau, pirapitinga, porquinho, robalo, sargo, tambaqui, tilápia, traira (tararira), tucunaré, bagre, matrinxã."
   },
   {
     id: 2,
-    name: "Spinnerbait",
-    image: "/img/iscas/spinnerbait.jpg",
+    name: "Isca de Hélice Nelson Nakamura Jet 90 Superfície 13g Plugs Cor 101",
+    image: "/img/iscas/isca2.webp",
     targetFish: ["Bagre", "Tainha"],
-    description: "Isca metálica com lâmina giratória que cria vibrações na água."
+    description: "Comprimento: 9 cm,Quantidade de ganchos: 2, Comprimento de 13cm, para maior alcance e precisão nas lançamentos. Peso leve de 13 gramas para fácil manuseio. Hélice de plástico que gera ruído característico durante a pesca."
   },
   {
     id: 3,
-    name: "Caddis",
-    image: "/img/iscas/spinnerbait.jpg",
+    name: "Isca Trick Jr Yara Artificial Meia Agua Pesca Tucunare Cor 55",
+    image: "/img/iscas/isca3.webp",
     targetFish: ["Salmão", "Truta"],
     description: "Isca seca que imita um inseto cristídeo em superfície."
   },
   {
     id: 4,
-    name: "Jig",
-    image: "/img/iscas/spinnerbait.jpg",
+    name: "Anteninha Manhoso Borboleta JR Pesca Tambaqui Pacu Tilapia 9mm",
+    image: "/img/iscas/isca4.webp",
     targetFish: ["Tilápia", "Carpa"],
     description: "Isca de metal com peso na frente, utilizada em fundo."
   },
   {
     id: 5,
-    name: "Grub",
-    image: "/img/iscas/spinnerbait.jpg",
+    name: "Isca Jig Speed Saurus Hilla Long de 200g e 23cm - Blue Pink",
+    image: "/img/iscas/isca5.webp",
     targetFish: ["Truta", "Pintado"],
     description: "Isca macia em formato de larva, ideal para pesca em correnteza."
   },
   {
     id: 6,
-    name: "Worm",
-    image: "/img/iscas/spinnerbait.jpg",
+    name: "Minhoca",
+    image: "/img/iscas/isca6.webp",
     targetFish: ["Bagre", "Lambari"],
     description: "Isca de minhoca viva ou artificial, clássico para várias espécies."
   },
   {
     id: 7,
-    name: "Spoon",
-    image: "/img/iscas/spinnerbait.jpg",
+    name: "Kit 2 Iscas Frog Matadeira Pesca Traíra Monster Popper Sapo",
+    image: "/img/iscas/isca7.webp",
     targetFish: ["Piranha", "Sardinha"],
     description: "Isca metálica em forma de colher que reflete luz, ótima em águas abertas."
   },
   {
     id: 8,
-    name: "Buzzbait",
-    image: "/img/iscas/spinnerbait.jpg",
+    name: "Kit 5 Iscas Frog Sapinho Soft Pescador do Litoral Traíra 13g",
+    image: "/img/iscas/isca8.webp",
     targetFish: ["Robalo", "Caranha"],
     description: "Isca que produz vibração e som na superfície, atrai predadores."
   },
   {
     id: 9,
-    name: "Popper",
-    image: "/img/iscas/spinnerbait.jpg",
+    name: "Isca Gudaoshop Lambari Articulada 6 Segmentos 10cm 18g Robalo Dourado",
+    image: "/img/iscas/isca9.webp",
     targetFish: ["Corvina", "Dourado"],
     description: "Isca de superfície que cria bolhas ao ser puxada, imitando peixes feridos."
   },
-  {
-    id: 10,
-    name: "Fly",
-    image: "/img/iscas/spinnerbait.jpg",
-    targetFish: ["Truta", "Salmonete"],
-    description: "Isca feita de penas e fios, usada em fly fishing para imitar insetos."
-  }
 ];
