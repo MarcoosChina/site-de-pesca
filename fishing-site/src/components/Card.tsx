@@ -10,8 +10,8 @@ type CardProps = {
 export default function Card({ title, image, description, href }: CardProps) {
   const container = (
     <div className="border rounded overflow-hidden shadow-lg">
-      <div className="relative h-48 w-full">
-        <Image src={image} alt={title} fill style={{ objectFit: "cover" }} />
+      <div className="relative w-full aspect-square">
+        <Image src={image} alt={title} fill style={{ objectFit: "contain", objectPosition: "center" }} />
       </div>
       <div className="p-4">
         <h3 className="font-bold text-lg mb-2">{title}</h3>
