@@ -1,0 +1,91 @@
+SITE DE PESCA
+==============
+
+1. FUNCIONALIDADES GERAIS (Visão de Usuário)
+-----------------------------------------------
+
+- Navegação por páginas: Início, Iscas, Equipamentos, Peixes, Fórum, Sobre
+- Página inicial com cards de acesso rápido às seções principais
+- Listagem de iscas com nome, imagem, descrição e peixes-alvo
+- Listagem de equipamentos dividida por abas: Varas, Molinetes, Carretilhas, Linhas
+- Listagem de peixes com foto, habitat (doce/salgada) e dicas
+- Fórum de comentários anônimos (criação e exibição)
+- Página 404 personalizada
+
+2. FUNCIONALIDADES TÉCNICAS BACKEND
+-----------------------------------
+
+- API Next.js (Route Handlers) para comentários
+  - GET /api/comments: retornar comentários paginados (page, limit)
+  - POST /api/comments: criar comentário com validações (não-vazio, max 500 chars)
+- Validação de inputs no lado servidor
+- Tratamento de erros com retornos JSON padronizados
+
+3. REQUISITOS DE INTERFACE / UI
+---------------------------------
+
+- Layout responsivo (mobile-first com Tailwind CSS)
+- Navbar fixa com menu hambúrguer para mobile
+- Cards reutilizáveis com imagem, título e descrição
+- Abas (Tabs) reutilizáveis para filtrar equipamentos
+- Formulário de comentários com textarea e botão de envio
+- Rodapé fixo com copyright dinâmico
+
+4. REQUISITOS DE ESTILO / DESIGN
+----------------------------------
+
+- Fonte: Montserrat (400, 600, 700)
+- Esquema de cores: tons de azul náutico (ex: #0066cc) e fundo claro
+- Uso de Tailwind CSS v4 para todos os estilos
+- Suporte a dark mode (prefers-color-scheme)
+- Animações leves e transições suaves
+
+5. REQUISITOS DE DADOS E ESTADO
+----------------------------------
+
+- TypeScript com tipagem estrita (strict mode recomendado)
+- Interfaces para: Bait, GearItem, Fish, Comment
+- Dados estáticos em arquivos TypeScript (baits.ts, gear.ts, fish.ts)
+- Estado local para comentários (React useState)
+- Persistência temporária em memória para comentários (pronto para banco de dados)
+
+6. REQUISITOS DE BANCO DE DADOS (PostgreSQL)
+----------------------------------------------
+
+- Prisma ORM configurado com datasource PostgreSQL
+- Modelo Comment: id (Int, autoincrement), content (VarChar 500), createdAt (DateTime)
+- Migrations automatizadas para criar tabelas
+- Geração do Prisma Client via script (prisma:generate)
+
+7. REQUISITOS DE SEO E PERFORMANCE
+------------------------------------
+
+- Metadata Next.js em todas as páginas (title, description)
+- next/image para otimização de imagens
+- Domínios de imagem configurados (Unsplash)
+- Página 404 customizada com link para home
+- Lighthouse score > 90 para performance e acessibilidade
+
+8. REQUISITOS DE SEGURANÇA E VALIDAÇÃO
+----------------------------------------
+
+- Rate limiting para comentários: 1 POST por IP a cada 30 segundos
+- Sanitização de inputs do fórum (evitar XSS)
+- Variáveis de ambiente seguras (.env.local não comitado)
+- .gitignore atualizado para excluir bancos de dados e secrets
+
+9. REQUISITOS DE DEPLOY
+-------------------------
+
+- Plataforma recomendada: Vercel
+- Variáveis de ambiente: DATABASE_URL (Neon PostgreSQL)
+- CI/CD automatizado via GitHub (deploy automático no push)
+
+10. ROADMAP E MELHORIAS FUTURAS
+---------------------------------
+
+- Autenticação (next-auth com Google/GitHub)
+- Migrar banco de SQLite/PostgreSQL para Supabase
+- Testes automatizados (Jest + React Testing Library)
+- PWA (Progressive Web App)
+- Internacionalização (i18n)
