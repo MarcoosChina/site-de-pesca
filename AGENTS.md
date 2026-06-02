@@ -56,6 +56,15 @@ Este arquivo descreve os agentes e ferramentas que o projeto utiliza, bem como c
 - **SEO avançado** – Inserir `next/head` com meta‑tags Open Graph e Schema.org.
 - **Testes automatizados** – Jest + React Testing Library para componentes críticos.
 
+## 7️⃣ Revisão Humana Antes de Commits
+
+**Revisão humana**Antes de executar qualquer `git commit`, o agente **deve**:
+**Exibir um resumo das alterações** (`git diff --staged` ou lista de arquivos modificados);
+**Aguardar aprovação explícita do usuário** ("pode commitar", "ok", "confirma", etc.);
+**Somente após confirmação, executar o commit**.
+
+O agente **nunca** deve commitar automaticamente sem essa etapa de revisão.
+
 ---
 
 ### Como usar
