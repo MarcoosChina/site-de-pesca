@@ -27,8 +27,6 @@
 
    ```bash
    npm run dev
-   ```
+    ```
 
 Acesse o site em `http://localhost:3000`.
-
-
