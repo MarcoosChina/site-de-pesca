@@ -24,7 +24,7 @@ Este documento reúne as tarefas necessárias para entregar o MVP (Minimum Viabl
 
 ## 2️⃣ Configuração do banco (PostgreSQL + Neon + Prisma)
 
-- [ ] Criar conta gratuita em [neon.tech](https://neon.tech) e copiar a `DATABASE_URL` para o `.env.local`
+- [x] Criar conta gratuita em [neon.tech](https://neon.tech) e copiar a `DATABASE_URL` para o `.env.local`
 - [x] Executar `npx prisma init --datasource-provider postgresql`
 - [x] Editar `prisma/schema.prisma` para incluir o modelo **Comment**:
 
@@ -36,8 +36,8 @@ Este documento reúne as tarefas necessárias para entregar o MVP (Minimum Viabl
   }
   ```
 
-- [ ] Rodar `npx prisma migrate dev --name init` para criar as tabelas no Neon
-- [ ] Verificar a tabela criada com `npx prisma studio`
+- [x] Rodar `npx prisma migrate dev --name init` para criar as tabelas no Neon
+- [x] Verificar a tabela criada com `npx prisma studio`
 
 ## 3️⃣ Estrutura de pastas & dados estáticos
 
@@ -101,8 +101,8 @@ export const metadata: Metadata = {
 
 ## 7️⃣ Estilos globais
 
-- [ ] `src/app/globals.css` – importar Tailwind + fonte Montserrat, variáveis de cor (azul náutico `#0066cc`, fundo claro).
-- [ ] Configurar `tailwind.config.ts` com as cores e fonte customizadas.
+- [x] `src/app/globals.css` – importar Tailwind + fonte Montserrat, variáveis de cor (azul náutico `#0066cc`, fundo claro).
+- [x] Configurar `tailwind.config.ts` com as cores e fonte customizadas.
 
 ## 8️⃣ Testes manuais
 
