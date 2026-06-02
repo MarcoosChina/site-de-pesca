@@ -36,8 +36,8 @@ Este documento reúne as tarefas necessárias para entregar o MVP (Minimum Viabl
   }
   ```
 
-- [x] Rodar `npx prisma migrate dev --name init` para criar as tabelas no Neon
-- [x] Verificar a tabela criada com `npx prisma studio`
+- [ ] Rodar `npx prisma migrate dev --name init` para criar as tabelas no Neon
+- [ ] Verificar a tabela criada com `npx prisma studio`
 
 ## 3️⃣ Estrutura de pastas & dados estáticos
 
@@ -101,8 +101,8 @@ export const metadata: Metadata = {
 
 ## 7️⃣ Estilos globais
 
-- [x] `src/app/globals.css` – importar Tailwind + fonte Montserrat, variáveis de cor (azul náutico `#0066cc`, fundo claro).
-- [x] Configurar `tailwind.config.ts` com as cores e fonte customizadas.
+- [ ] `src/app/globals.css` – importar Tailwind + fonte Montserrat, variáveis de cor (azul náutico `#0066cc`, fundo claro).
+- [ ] Configurar `tailwind.config.ts` com as cores e fonte customizadas.
 
 ## 8️⃣ Testes manuais
 
