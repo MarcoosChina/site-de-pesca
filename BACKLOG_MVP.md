@@ -107,8 +107,8 @@ export const metadata: Metadata = {
 ## 8️⃣ Testes manuais
 
 - [x] Navegar em cada página e conferir layout em desktop & mobile.
-- [ ] Inserir e visualizar comentários no fórum.
-- [ ] Verificar persistência dos comentários após recarregar a página.
+- [x] Inserir e visualizar comentários no fórum.
+- [x] Verificar persistência dos comentários após recarregar a página.
 - [ ] Testar a página 404 acessando uma rota inválida.
 - [ ] Validar SEO com o Lighthouse no Chrome.
 

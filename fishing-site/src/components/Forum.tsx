@@ -1,26 +1,50 @@
 "use client";
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
 
-type Comment = {
+// Define comment shape matching API response
+interface Comment {
   id: number;
   content: string;
-  createdAt: Date;
-};
+  createdAt: string; // ISO timestamp string
+}
 
 export default function Forum() {
   const [comments, setComments] = useState<Comment[]>([]);
-  const [newComment, setNewComment] = useState("");
+  const [newComment, setNewComment] = useState<string>("");
 
-  const handleSubmit = (e: FormEvent) => {
+  // Load existing comments on component mount
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const res = await fetch("/api/comments");
+        if (!res.ok) throw new Error("Failed to fetch comments");
+        const json = await res.json();
+        // API returns { data: Comment[], page, limit, total }
+        setComments(json.data ?? []);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchComments();
+  }, []);
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!newComment.trim()) return;
-    const comment: Comment = {
-      id: Date.now(),
-      content: newComment.trim(),
-      createdAt: new Date()
-    };
-    setComments([comment, ...comments]);
-    setNewComment("");
+    try {
+      const res = await fetch("/api/comments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content: newComment.trim() }),
+      });
+      if (!res.ok) throw new Error("Failed to post comment");
+      const created: Comment = await res.json();
+      // Prepend new comment to list
+      setComments((prev) => [created, ...prev]);
+      setNewComment("");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -42,9 +66,7 @@ export default function Forum() {
         {comments.map((c) => (
           <li key={c.id} className="border-b py-2">
             <p>{c.content}</p>
-            <small className="text-gray-500">
-              {c.createdAt.toLocaleString()}
-            </small>
+            <small className="text-gray-500">{new Date(c.createdAt).toLocaleString()}</small>
           </li>
         ))}
       </ul>
