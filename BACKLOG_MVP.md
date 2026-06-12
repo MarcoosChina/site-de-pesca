@@ -106,7 +106,7 @@ export const metadata: Metadata = {
 
 ## 8️⃣ Testes manuais
 
-- [ ] Navegar em cada página e conferir layout em desktop & mobile.
+- [x] Navegar em cada página e conferir layout em desktop & mobile.
 - [ ] Inserir e visualizar comentários no fórum.
 - [ ] Verificar persistência dos comentários após recarregar a página.
 - [ ] Testar a página 404 acessando uma rota inválida.
